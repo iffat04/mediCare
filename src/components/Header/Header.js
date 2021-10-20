@@ -2,6 +2,9 @@ import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UseAuth from '../../hooks/UseAuth';
+import { HashLink } from 'react-router-hash-link';
+
+
 
 const Header = () => {
     const{user,logOut}=UseAuth();
@@ -9,20 +12,19 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
-                <Navbar.Brand href="#home">MEDICARE</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/homepage#home">MEDICARE</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     <Nav.Link as={Link} to="/homepage#home">Home</Nav.Link>
                     <NavDropdown title="Quick Info" id="collasible-nav-dropdown">
-                        <NavDropdown.Item as={Link} to="/homepage#today-doc">Todays Doctor</NavDropdown.Item>
-                        <NavDropdown.Item as={Link} to="/homepage#tomorrowdoc">Tommorows Doctor</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        <NavDropdown.Item as={HashLink} smooth to="/homepage#today-doc">Todays Doctor</NavDropdown.Item>
+                        <NavDropdown.Item as={HashLink} smooth to="/homepage#tomorrowdoc">Tommorows Doctor</NavDropdown.Item>
+        
                     </NavDropdown>
                     <Nav.Link  as={Link} to="/services">Services</Nav.Link>
                     <Nav.Link  as={Link} to="/doctors">Doctors</Nav.Link>
+                    <Nav.Link  as={Link} to="/appointment">Schedule For Appointment</Nav.Link>
                    </Nav>
                    <Nav>
                     {user.email?

@@ -6,11 +6,11 @@ import Services from './components/Services/Services';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import AuthProvider from './contexts/AuthProvider';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-import Login from './components/Login/Login';
 import SignIn from './components/SignIn/SignIn';
 import Doctors from './components/Doctors/Doctors';
 import Footer from './components/Footer/Footer';
 import NotFound from './NotFound/NotFound';
+import MakeAppointment from './components/MakeAppointment/MakeAppointment';
 
 function App() {
   return (
@@ -41,6 +41,10 @@ function App() {
       </ProtectedRoute>
       <ProtectedRoute path="/doctors">
       <Doctors></Doctors>
+      </ProtectedRoute>
+
+      <ProtectedRoute path="/appointment">
+      <MakeAppointment></MakeAppointment>
       </ProtectedRoute>
 
       <Route path="*">

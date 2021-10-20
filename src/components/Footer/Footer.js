@@ -6,7 +6,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className="bg-dark mt-5 p-4 ">
-        <div className=" d-flex justify-content-around ">
+        <div className=" d-md-flex justify-content-around  ">
             <div className="d-flex d-flex flex-column justify-content-start">
             <h2 className="text-white  w-75 pt-3">Login To Connect</h2>
             <Form className="w-75">
@@ -38,7 +38,8 @@ const Footer = () => {
             </div>
             
         </div>
-        <p className="text-white mt-2 text-center"> copyright reserved @musicvalley </p>
+
+        <p className="text-white mt-2 text-center"> copyright reserved @medicare </p>
         </div>
     );
 };

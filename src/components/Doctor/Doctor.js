@@ -11,6 +11,9 @@ const Doctor = ({doctor}) => {
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text">{degree}</p>
+                    <p class="card-text">Visiting Fee:<span className="text-warning">{Fees}</span></p>
+                    <p class="card-text">{Time}</p>
+                    <button className="btn btn-info p-1">Get Appointment</button>
                 </div>
                 </div>
         </div>
