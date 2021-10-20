@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "department": "psychological",
+      "image": "https://raw.githubusercontent.com/iffat04/hospital-resources/main/services/psychological.jpg",
+      "title": "Psychological Counselling",
+      "logo": "https://raw.githubusercontent.com/iffat04/hospital-resources/e25d7cf99bc19f28ee4afbbfc38588e6951d59d7/logo/phychology.svg",
+      "about": "MediCare is the most comprehensive and most competitive mental health service provider in the country with multi-disciplinary mental health experts. We provide face to face & online psychological counseling services.."
+    },
+    {
+      "id": 2,
+      "department": "medicine",
+      "image":"https://raw.githubusercontent.com/iffat04/hospital-resources/main/services/medicine.jpg",
+      "title":"Medicine",
+      "logo": "https://raw.githubusercontent.com/iffat04/hospital-resources/e25d7cf99bc19f28ee4afbbfc38588e6951d59d7/logo/medicine.svg",
+      "about": "Physiotherapy or Physical Medicine means treatment and rehabilitation procedures by physical means following diseases, injuries or loss of body parts. The physical means are various exercises, heat, cold, light, sound, electricity, magnetism and massage used to improve circulation."
+    },
+    {
+      "id": 3,
+      "department": "emergency",
+      "image":"https://raw.githubusercontent.com/iffat04/hospital-resources/main/services/icu.jpg",
+      "title": "Emergency Services",
+      "logo": "https://raw.githubusercontent.com/iffat04/hospital-resources/e25d7cf99bc19f28ee4afbbfc38588e6951d59d7/logo/emergency.svg",
+      "about": "MediCare provides non-stop life-saving care when required, 24 hours a day, seven days a week. ER has got all the life saving support for critically ill patients including ventilators and defibrillators. All doctors and nurses are specially trained to deal with all types of emergency patients. ."
+    },
+    {
+      "id": 4,
+      "department": "lab",
+      "image":"https://raw.githubusercontent.com/iffat04/hospital-resources/main/services/lab.jpg",
+      "title": "Diagonostic Lab",
+      "logo": "https://raw.githubusercontent.com/iffat04/hospital-resources/e25d7cf99bc19f28ee4afbbfc38588e6951d59d7/logo/lab.svg",
+      "about": "We continuously strive to achieve highest possible standard in every activities and in the quality of products and services we provide. For this we have a very modern lab for all tests."
+    },
+    {
+      "id": 5,
+      "department": "bloodbank" ,
+      "image":"https://raw.githubusercontent.com/iffat04/hospital-resources/main/services/blood.jpg",
+      "title": "Blood Bank",
+      "logo": "https://raw.githubusercontent.com/iffat04/hospital-resources/b2b73a10dcc50ffb7654c8780f00d552c9663f62/logo/blood.svg",
+      "about": "The Blood Bank of MediCare is a Government licensed blood bank established in 2006.  Located in the ground floor of this hospital, it aims to provide patients with the safest possible blood, equivalent to any international standard. All donations received in the blood bank are voluntary non-remunerated."
+    },
+    {
+      "id": 6,
+      "department": "drugstore",
+      "image":"https://raw.githubusercontent.com/iffat04/hospital-resources/main/services/drug.jpg",
+      "title": "Drug Store",
+      "logo": "https://raw.githubusercontent.com/iffat04/hospital-resources/e25d7cf99bc19f28ee4afbbfc38588e6951d59d7/logo/drug.svg",
+      "about": "Our department embodies excellence, inspiration and empowerment in caring for the patients.To maintain and further develop clinical service by providing superior patient care, by always striving to remain a leading referral centre for patients, by promoting the development and implementation of innovative advances in clinical management."
+    }
+    
+  ]

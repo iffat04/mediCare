@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+.doc-image{
+ border-radius: 10px;
+ width: 200px;
+
+}
+.doc-image img{
+  border-radius: 20px;
+  transition: radious 5s ease-in 5s;
+}
+.doctor:hover img{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.doctor:hover .doc-info{
+display: block;
+transition: width 2s ease-in-out 5s;
+}
+.doc-info{
+  border:1px solid grey;
+  width: 200px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: none;
+}
+/*
+body {
+  margin: 0;
+  padding: 0;
+  background: #250008;
+  font-family: sans-serif;
+}*/
