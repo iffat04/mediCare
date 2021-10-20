@@ -9,7 +9,7 @@ initializeAuthentication();
 
 const SignIn=()=> {  
 const location = useLocation();
-const {user,signInUsingGoogle,registerd,signInwithEmail}= UseAuth();
+const {user,error,signInUsingGoogle,registerd,signInwithEmail}= UseAuth();
 const { register, handleSubmit, formState: { errors } } = useForm();
 const[toggle,setToggle]=useState(false);
 
@@ -46,6 +46,11 @@ console.log(user);
               <p>New User ? Click to Register</p>
             }
             </button>
+            <div>
+              {error &&
+              <p className="text-danger fs-4">{error}</p>
+              }
+            </div>
             
                <div className="mt-4">
                {toggle?

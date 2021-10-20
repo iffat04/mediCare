@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const TommorowsDoctor = () => {
@@ -24,7 +25,9 @@ const TommorowsDoctor = () => {
                         <p>Scheduale: {doctor.Time}</p>
                         <p>Fee: {doctor.Fees}</p>
                         <p className="text-danger">Specialist: {doctor.specialist}</p>
+                        <Link to="/appointment">
                         <button className="btn btn-warning p-2">Make Appointment</button>
+                        </Link>
                     </div>
                     </div>
                 </div>

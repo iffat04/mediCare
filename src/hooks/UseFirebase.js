@@ -7,16 +7,25 @@ initializeAuthentication();
 
 const useFirebase = () => {
     const[user,setUser]=useState({});
+    const[isloading,setIsloading]=useState(true);
+    const[error,setError]=useState('');
     
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
     //////////sign in with google///////////////
     const signInUsingGoogle = ()=>{
+        setIsloading(true);
         signInWithPopup(auth, googleProvider)
         .then(result=>{
             setUser(result.user);
           
+        })
+        .catch(error=>{
+            setError(error.message);
+        })
+        .finally(()=>{
+            setIsloading(false);
         })
 
     console.log('click')
@@ -24,24 +33,26 @@ const useFirebase = () => {
 
     ///////////register with email and password ///////////
     const registerd = (email,password,name) =>{
+        setIsloading(true);
         createUserWithEmailAndPassword(auth, email, password)
        
-        .then((result) => {
+        //.then((result) => {
             // Signed in 
             //setUser(result.user); 
-            console.log(result.user);
-        })
+            //console.log(result.user);
+        //})
         .then(()=>{
             setdisplayname(name);
         })
         .then(()=>{
             signInwithEmail(email,password);
         })
-        .catch((error) => {
-            const errorMessage = error.message;
-            console.log(errorMessage);
-            // ..
-        });
+        .catch(error=>{
+            setError(error.message);
+        })
+        .finally(()=>{
+            setIsloading(false);
+        })
     }
 
     /////set displayname////
@@ -67,18 +78,24 @@ const useFirebase = () => {
 
                 // ...
             })
-            .catch((error) => {
-                const errorMessage = error.message;
-                console.log(errorMessage);
-            });
+            .catch(error=>{
+                setError(error.message);
+            })
+            .finally(()=>{
+                setIsloading(false);
+            })
     }
 
 
     ////////////log out//////////////
     const logOut =()=>{
+        setIsloading(true);
         signOut(auth)
         .then(()=>{
             setUser({})
+        })
+        .finally(()=>{
+            setIsloading(false);
         })
     }
 
@@ -91,6 +108,7 @@ const useFirebase = () => {
             else{
                 //user signed out
             }
+            setIsloading(false);
         }
         );
     },[]);
@@ -98,6 +116,8 @@ const useFirebase = () => {
     return {
         user,
         auth,
+        isloading,
+        error,
         signInUsingGoogle,
         logOut,
         setUser,

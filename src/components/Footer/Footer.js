@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { FloatingLabel, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Footer.css'
 
@@ -8,17 +8,20 @@ const Footer = () => {
         <div className="bg-dark mt-5 p-4 ">
         <div className=" d-md-flex justify-content-around  ">
             <div className="d-flex d-flex flex-column justify-content-start">
-            <h2 className="text-white  w-75 pt-3">Login To Connect</h2>
+            <h2 className="text-white  w-75 pt-3">Left Your Comments</h2>
             <Form className="w-75">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
+                <FloatingLabel className="my-3" controlId="floatingTextarea2" label="Comments">
+                    <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    style={{ height: '100px' }}
+                    />
+                </FloatingLabel>
                
             </Form>
             <button  className="btn btn-warning w-50">Submit</button>
